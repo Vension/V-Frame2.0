@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">V-Frame2.0</string>
+
+    <string name="tab_title_home">精选</string>
+    <string name="tab_title_find">发现</string>
+    <string name="tab_title_hot">热门</string>
+    <string name="tab_title_me">我的</string>
+
+    <string name="transition_name">shareView</string>
+</resources>
