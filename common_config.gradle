@@ -13,7 +13,7 @@ ext{
             androidSupportSdkVersion   : "27.1.1",
             retrofitSdk                : "2.4.0",
             glideSdk                   : "4.7.1",
-            rxJavaSdk                  : "2.1.8",
+            rxJavaSdk                  : "2.1.9",
             rxAndroidSdk               : "2.0.2",
             rxBindingSdk               : "2.0.0",
             daggerSdk                  : "2.1.6",

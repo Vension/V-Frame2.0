@@ -96,7 +96,7 @@ abstract class VBaseFragment : Fragment(),IFragment,View.OnClickListener {
             initToolBar(mCommonTitleBar!!)//初始化标题栏
         }
         //绑定view
-        rootView?.let { ButterKnife.bind(this,it) }
+        mUnBinder = ButterKnife.bind(this, view)
         initViewAndData(savedInstanceState)
         lazyLoadDataIfPrepared()
         //多种状态切换的view 重试点击事件
@@ -202,6 +202,11 @@ abstract class VBaseFragment : Fragment(),IFragment,View.OnClickListener {
         mloadingDialog.dismiss()
         super.onDestroy()
         VBaseApplication.getRefWatcher(activity!!).watch(activity)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        mUnBinder.unbind()
     }
 
     /** =========================== ============================ */

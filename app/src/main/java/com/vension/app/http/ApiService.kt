@@ -1,6 +1,6 @@
 package com.vension.app.http
 
-import com.vension.app.Constant
+import com.vension.app.Config
 import com.vension.app.beans.NewsItemInfo
 import com.vension.app.beans.UserInfo
 import com.vension.frame.http.BaseResponse
@@ -18,7 +18,7 @@ import retrofit2.http.*
 
 interface ApiService {
 
-    @GET(Constant.QQ_SPORT_API)
+    @GET(Config.QQ_SPORT_API)
     fun getQQSportNews(@Query("baid") baid: String, @Query("apikey") apiKey: String): Flowable<BaseResponse<List<NewsItemInfo>>>
 
     @FormUrlEncoded

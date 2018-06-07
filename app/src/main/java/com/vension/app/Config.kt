@@ -28,7 +28,7 @@ import android.graphics.Color
  * ========================================================
  */
 
-object Constant {
+object Config {
 
     // 聚合数据api base url
     const val JUHE_BASE_URL = "http://api01.bitspaceman.com:8000/"

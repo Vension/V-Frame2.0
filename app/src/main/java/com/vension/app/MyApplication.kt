@@ -64,7 +64,7 @@ class MyApplication : VBaseApplication() {
         提供三种常见框架的简单案例：（你也可以按照例子自己实现）
         AsyncHttpEngine、OKHttpEngine、VolleyHttpEngine
          */
-        initHttpConfig(Constant.JUHE_BASE_URL)
+        initHttpConfig(Config.JUHE_BASE_URL)
         /**
          * 初始化全局图片加载框架
          * GlideImageLoader为你的图片加载框架实现类

@@ -50,7 +50,6 @@ android {
     buildTypes {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            buildConfigField "boolean", "USE_CANARY", "false"
             minifyEnabled true  //是否混淆代码 设为false即可断点调试
             shrinkResources true  //自动移除无用的Resource文件
             zipAlignEnabled true// 包优化
@@ -75,7 +74,6 @@ android {
         debug {
             //这两个变量是自定义的,自己也可以自定义字段,他会默认配置到BuildConfig中,app中可以根据这些字段执行一些操作
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            buildConfigField "boolean", "USE_CANARY", "true"
             minifyEnabled false
             zipAlignEnabled false
             shrinkResources false
@@ -86,8 +84,19 @@ android {
 
     //支持lambda表达式
     compileOptions {
+        //编码
+        encoding = 'utf-8'
+        //Java编译级别
         sourceCompatibility JavaVersion.VERSION_1_8
+        //生成的Java字节码版本
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 
     sourceSets {

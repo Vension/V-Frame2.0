@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.vension.app.Constant
+import com.vension.app.Config
 import com.vension.app.R
 import com.vension.app.beans.NewsItemInfo
 import com.vension.app.mvp.contract.SportNewsContract
@@ -49,7 +49,7 @@ class TabFragment_1 : VBaseMVPFragment<SportNewsContract.View,SportNewsPresenter
 
     override fun lazyLoadData() {
 //        mPresenter.getSportNews("123456789","12365656")
-        mPresenter.getSportNews("69", Constant.JUHE_API_KEY)
+        mPresenter.getSportNews("69", Config.JUHE_API_KEY)
     }
 
 
